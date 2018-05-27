@@ -6,11 +6,20 @@
 
 using namespace std;
 
+int trig(int b) {
+  return (b>0)?((int)((b-2)/2) + trig(b-2)):(0);
+}
+
 int main()
 {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
+  int t,b;
+  cin>>t;
+  for(int i=0;i<t;i++){
+    cin>>b;
+    cout<<trig(b)<<endl;
+  }
 
-  
 	return 0;
 }
